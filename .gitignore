@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.env
+events.db
+events.db-journal
+.DS_Store
+.npm

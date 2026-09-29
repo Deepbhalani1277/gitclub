@@ -1,0 +1,122 @@
+module.exports = [
+  {
+    title: 'Git & GitHub Fundamentals',
+    category: 'Workshop',
+    description: 'Learn the basics of version control with Git and how to collaborate using GitHub. Perfect for beginners.',
+    date: '2026-10-10',
+    start_time: '14:00',
+    end_time: '16:00',
+    venue: 'Lab 3, CS Department',
+    max_capacity: 40,
+    reg_deadline: '2026-10-09',
+    status: 'upcoming'
+  },
+  {
+    title: 'Open Source Contribution Day',
+    category: 'Collaboration',
+    description: 'Make your first open-source contribution! We will guide you through finding good first issues and submitting PRs.',
+    date: '2026-10-18',
+    start_time: '10:00',
+    end_time: '17:00',
+    venue: 'Main Library - Collaboration Zone',
+    max_capacity: 50,
+    reg_deadline: '2026-10-15',
+    status: 'upcoming'
+  },
+  {
+    title: 'Web Dev with React — Hands-on',
+    category: 'Workshop',
+    description: 'Build your first dynamic web application using React. We will cover components, state, and props.',
+    date: '2026-10-25',
+    start_time: '13:30',
+    end_time: '16:30',
+    venue: 'Online (Google Meet)',
+    max_capacity: 100,
+    reg_deadline: '2026-10-24',
+    status: 'upcoming'
+  },
+  {
+    title: 'Competitive Coding Challenge',
+    category: 'Competition',
+    description: 'Test your algorithmic skills against fellow students. Prizes for top 3 participants!',
+    date: '2026-11-01',
+    start_time: '09:00',
+    end_time: '12:00',
+    venue: 'Lab 1 & 2',
+    max_capacity: 60,
+    reg_deadline: '2026-10-30',
+    status: 'upcoming'
+  },
+  {
+    title: 'Campus Hackathon 2026',
+    category: 'Hackathon',
+    description: 'A 24-hour hackathon to build solutions for campus life. Food and drinks provided!',
+    date: '2026-11-15',
+    start_time: '10:00',
+    end_time: null,
+    venue: 'Student Activities Center',
+    max_capacity: 120,
+    reg_deadline: '2026-11-10',
+    status: 'upcoming'
+  },
+  {
+    title: 'Developer Community Meetup',
+    category: 'Meetup',
+    description: 'Casual networking and lightning talks from seniors about their internship experiences.',
+    date: '2026-11-22',
+    start_time: '17:00',
+    end_time: '19:00',
+    venue: 'Cafe Lounge',
+    max_capacity: null,
+    reg_deadline: null,
+    status: 'upcoming'
+  },
+  {
+    title: 'Introduction to Linux & CLI',
+    category: 'Workshop',
+    description: 'Get comfortable with the Linux command line. Essential skills for every developer.',
+    date: '2026-08-20',
+    start_time: '14:00',
+    end_time: '16:00',
+    venue: 'Lab 4',
+    max_capacity: 30,
+    reg_deadline: '2026-08-19',
+    status: 'past'
+  },
+  {
+    title: 'Python for Beginners',
+    category: 'Workshop',
+    description: 'Start your programming journey with Python. No prior experience required.',
+    date: '2026-07-12',
+    start_time: '10:00',
+    end_time: '13:00',
+    venue: 'Lab 3',
+    max_capacity: 40,
+    reg_deadline: '2026-07-10',
+    status: 'past'
+  },
+  {
+    title: 'Cloud Deployment Basics',
+    category: 'Workshop',
+    description: 'Learn how to deploy your applications to the cloud using free tier services.',
+    date: '2026-06-05',
+    start_time: '15:00',
+    end_time: '17:00',
+    venue: 'Online (Zoom)',
+    max_capacity: 80,
+    reg_deadline: '2026-06-04',
+    status: 'past'
+  },
+  {
+    title: 'Code Review Best Practices',
+    category: 'Meetup',
+    description: 'How to give and receive constructive feedback on code. Interactive session.',
+    date: '2026-09-10',
+    start_time: '16:00',
+    end_time: '18:00',
+    venue: 'Seminar Hall B',
+    max_capacity: 50,
+    reg_deadline: '2026-09-09',
+    status: 'past'
+  }
+];

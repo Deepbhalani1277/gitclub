@@ -1,0 +1,106 @@
+.events-page {
+  padding: var(--space-8) var(--space-4) var(--space-12);
+}
+
+.page-header {
+  margin-bottom: var(--space-8);
+}
+
+.page-header p {
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+  margin-top: var(--space-2);
+}
+
+.filters-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+  background-color: var(--color-surface);
+  padding: var(--space-4);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+}
+
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: var(--space-4);
+  color: var(--color-text-muted);
+}
+
+.search-input {
+  width: 100%;
+  padding: var(--space-3) var(--space-4) var(--space-3) var(--space-12);
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.category-pills {
+  display: flex;
+  gap: var(--space-2);
+  overflow-x: auto;
+  padding-bottom: var(--space-2);
+  /* Hide scrollbar for cleaner look */
+  scrollbar-width: none;
+}
+
+.category-pills::-webkit-scrollbar {
+  display: none;
+}
+
+.pill {
+  white-space: nowrap;
+  padding: var(--space-1) var(--space-4);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  color: var(--color-text-muted);
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.pill:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-text);
+}
+
+.pill.active {
+  background-color: var(--color-accent);
+  color: #0D1117;
+  border-color: var(--color-accent);
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .filters-section {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .search-box {
+    width: 300px;
+    flex-shrink: 0;
+  }
+  
+  .category-pills {
+    padding-bottom: 0;
+  }
+}

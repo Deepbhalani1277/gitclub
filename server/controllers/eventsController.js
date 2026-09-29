@@ -134,3 +134,35 @@ exports.registerForEvent = (req, res) => {
     throw error;
   }
 };
+
+exports.createEvent = (req, res) => {
+  const { 
+    title, category, description, date, start_time, 
+    end_time, venue, image_url, max_capacity, reg_deadline 
+  } = req.body;
+
+  if (!title || !category || !description || !date || !start_time || !venue) {
+    return res.status(400).json({ success: false, error: 'Required fields are missing' });
+  }
+
+  try {
+    const insertStmt = db.prepare(`
+      INSERT INTO events (
+        title, category, description, date, start_time, end_time, venue, image_url, max_capacity, reg_deadline, status
+      ) VALUES (
+        ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'upcoming'
+      )
+    `);
+
+    const result = insertStmt.run(
+      title, category, description, date, start_time, 
+      end_time || null, venue, image_url || null, 
+      max_capacity || null, reg_deadline || null
+    );
+
+    res.status(201).json({ success: true, eventId: result.lastInsertRowid, message: 'Event created successfully' });
+  } catch (error) {
+    console.error('Error creating event:', error);
+    res.status(500).json({ success: false, error: 'Failed to create event' });
+  }
+};

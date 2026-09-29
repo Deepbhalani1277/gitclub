@@ -1,3 +1,5 @@
+import { getToken } from './auth';
+
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
 
 export const fetchEvents = async ({ type = 'upcoming', search = '', category = '' } = {}) => {
@@ -28,5 +30,33 @@ export const registerForEvent = async (id, registrationData) => {
   
   const data = await response.json();
   if (!response.ok) throw new Error(data.error || 'Registration failed');
+  return data;
+};
+
+export const loginAdmin = async (username, password) => {
+  const response = await fetch(`${API_URL}/auth/login`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ username, password })
+  });
+  
+  const data = await response.json();
+  if (!response.ok) throw new Error(data.error || 'Login failed');
+  return data;
+};
+
+export const createEvent = async (eventData) => {
+  const token = getToken();
+  const response = await fetch(`${API_URL}/events`, {
+    method: 'POST',
+    headers: { 
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
+    },
+    body: JSON.stringify(eventData)
+  });
+  
+  const data = await response.json();
+  if (!response.ok) throw new Error(data.error || 'Failed to create event');
   return data;
 };

@@ -24,6 +24,9 @@ function Footer() {
       </div>
       <div className="footer-bottom">
         <p>&copy; {new Date().getFullYear()} Git Club CHARUSAT. This is a hackathon project.</p>
+        <p style={{ marginTop: '0.5rem' }}>
+          <Link to="/admin/login" style={{ color: 'var(--color-text-muted)', fontSize: '0.75rem' }}>Admin Portal</Link>
+        </p>
       </div>
     </footer>
   );
